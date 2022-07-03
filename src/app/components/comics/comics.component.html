@@ -1,1 +1,16 @@
-<p>comics works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col" *ngFor="let comic of comics">
+      <div class="card" style="width: 18rem;">
+        <img *ngIf="comic.images[0]" class="card-img-top"
+          src="{{(comic.images[0].path +'.'+comic.images[0].extension)  }}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{comic.title}}</h5>
+          <p class="card-text text-truncate">{{comic.description}}</p>
+          <a href="#" class="card-link btn btn-primary">Add</a>
+          <a href="#" class="card-link btn btn-info">Mais</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
